@@ -6,14 +6,14 @@ interface CounterProps {
   note?: string;
 }
 
-export const Counter = (props: CounterProps) => {
+export const Counter = (props: CounterProps): JSX.Element => {
   const [count, setCount]= useState<number>(props.initCount || 0);
 
   const onDecrement = useCallback((): void => {
     setCount(count - 1);
   }, [count]);
 
-   const onIncrement = useCallback((): void => {
+  const onIncrement = useCallback((): void => {
     setCount(count + 1);
   }, [count]);
 
@@ -25,8 +25,8 @@ export const Counter = (props: CounterProps) => {
       <br/>
       <small>{props.note}</small>
     </div>
-  )
-}
+  );
+};
 
 Counter.defaultProps = {
   note: 'Function component (hooks)',

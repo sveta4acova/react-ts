@@ -13,17 +13,17 @@ const counter = (state: CounterState = initState, action: CounterActions): Count
       return {
         ...state,
         count: state.count + 1,
-      }
+      };
     case counterTypes.decrement:
       return {
         ...state,
         count: state.count - 1,
-      }
+      };
     case counterTypes.changeValue:
       return {
         ...state,
         count: action.count,
-      }
+      };
     default:
       return state;
   }

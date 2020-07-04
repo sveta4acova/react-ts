@@ -1,18 +1,20 @@
 {
-  "extends": ["plugin:react/recommended", "prettier"],
-  "parser": "babel-eslint",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 6,
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "plugins": ["babel", "react", "prettier"],
+  "plugins": ["babel", "react", "@typescript-eslint"],
   "env": {
     "browser": true
   },
   "rules": {
-    "prettier/prettier": "error",
     "indent": ["error", 2, { "SwitchCase": 1 } ],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],

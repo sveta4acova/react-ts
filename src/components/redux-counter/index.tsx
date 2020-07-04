@@ -9,9 +9,9 @@ interface ReduxCounterProps {
   note?: string;
 }
 
-export const ReduxCounter = (props: ReduxCounterProps) => {
+export const ReduxCounter = (props: ReduxCounterProps): JSX.Element => {
   const dispatch: Dispatch = useDispatch();
-  const counter: CounterState = useSelector((state: AppState): CounterState => state.counter)
+  const counter: CounterState = useSelector((state: AppState): CounterState => state.counter);
 
   const onDecrement = useCallback((): void => {
     dispatch(decrementCounter());
@@ -34,8 +34,8 @@ export const ReduxCounter = (props: ReduxCounterProps) => {
       <br/>
       <small>{props.note}</small>
     </div>
-  )
-}
+  );
+};
 
 ReduxCounter.defaultProps = {
   note: 'Function component (state in redux store)',

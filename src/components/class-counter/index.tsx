@@ -29,16 +29,16 @@ export class ClassCounter extends React.Component<ClassCounterProps, ClassCounte
   onDecrement = (): void => {
     this.setState((prevState: ClassCounterState): ClassCounterState => ({
       count: prevState.count - 1,
-    }))
+    }));
   }
 
   onIncrement = (): void => {
     this.setState((prevState: ClassCounterState): ClassCounterState => ({
       count: prevState.count + 1,
-    }))
+    }));
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div className="ClassCounter">
         <Button text="-" onClick={this.onDecrement}/>
@@ -47,6 +47,6 @@ export class ClassCounter extends React.Component<ClassCounterProps, ClassCounte
         <br/>
         <small>{this.props.note}</small>
       </div>
-    )
+    );
   }
 }
